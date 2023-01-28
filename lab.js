@@ -4,7 +4,10 @@
   Give it a key of name with the value being your name, and another key of age with the value being your age.
 */
 
-//Code here
+const me = {
+  name: `Lily`,
+  age: 23
+}
 
 
 
@@ -15,21 +18,25 @@
 //name (a string), color (a string), age (a number),
 //and goodBoy/goodGirl (a boolean).
 
-//Code here
+const dog = {
+  name: `Frodo`,
+  color: `Black`,
+  age: 8,
+  goodBoy: true
+}
 
 
 
 //////////////////////////// PROBLEM 3 ////////////////////////////
 /* Print out the name of the dog you created in problem 2 using dot-notation. */
 
-//Code here
-
+console.log(dog.name)
 
 
 //////////////////////////// PROBLEM 4 ////////////////////////////
 /* Print out the color of the dog you created in problem 2 using bracket-notation. */
 
-//Code here
+console.log(dog[`color`])
 
 
 
@@ -39,23 +46,34 @@
   Have the values to those keys be strings that are equal to your favorite thing in that category.
 */
 
-//Code here
+let favoriteThings = {
+  band: `Black Rebel Motorcycle Club`,
+  food: `Curry`,
+  person: `*borat voice* My Wife`,
+  book: `The Silmarillion`,
+  movie: `Fright Night`,
+  holiday: `Halloween`
+}
 
 
 /*
-  After you've made your object, use bracket or dot notation to add another key named 'car' with the value being your favorite car and then another key named 'show' with the value being your favorite show.
+  After you've made your object, use bracket or dot notation to add another key named 'car' with the value being your favorite car 
+  and then another key named 'show' with the value being your favorite show.
 */
 
-//Code here
-
+favoriteThings.car = `Toyota`
+favoriteThings[`show`] = `Twin Peaks`
 
 /*
   Now use bracket or dot notation to change the value of the food key in your favoriteThings object to be 'Chicken Nuggets'
-  and change the value of the book key in your favoriteThings object to be 'Harry Potter'. (If they were either of those things already, change them to something else.)
+  and change the value of the book key in your favoriteThings object to be 'Harry Potter'. 
+  (If they were either of those things already, change them to something else.)
 */
 
-//Code here
+favoriteThings[`food`] = `Chicken Nuggets`
+favoriteThings.book = `Harry Potter`
 
+console.log(favoriteThings)
 
 //////////////////////////// PROBLEM 6 ////////////////////////////
 
@@ -72,7 +90,8 @@ var carDetails = {
   Use object destructuring to save the property values from the object carDetails into new variables. 
 */
 
-//Code Here
+let {color, make, model, year} = carDetails
+// console.log(`I drive a ${color} ${year} ${make} ${model}`)
 
 
 
@@ -85,8 +104,7 @@ var carDetails = {
 */
 
 function greeting( obj ) {
-  //Code Here
-  
+  let {title, firstName, lastName} = obj
   // Do not edit the code below.
   return 'Hello, ' + title + ' ' + firstName + ' ' + lastName + '!';
   // Do not edit the code above.
@@ -104,7 +122,10 @@ function greeting( obj ) {
   Sum up the values and return the total number.
 */
 
-//Code Here
+function totalPopulation(obj) {
+  let {utah, california, texas, arizona} = obj
+  return utah + california + texas + arizona
+}
 
 
 
@@ -118,7 +139,11 @@ function greeting( obj ) {
   Push these new variables to an array and return the array. 
 */
 
-//Code Here
+function ingredients(obj) {
+  let {carb, fat, protein} = obj
+  return [carb, fat, protein]
+  
+}
 
 
 
@@ -140,7 +165,9 @@ var user = {
   Make that change without modifying the original object code above.
 */
 
-//Code Here
+user.name = `Bryan G. Smith`
+user.email = `bryan.smith@devmounta.in`
+
 
 
 //////////////////////////// PROBLEM 11 ////////////////////////////
