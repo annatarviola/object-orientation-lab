@@ -211,14 +211,13 @@ class Wizard {
     this.age = age;
     this.favoriteSpell = favoriteSpell;
   }
-  
+
   castSpell() {
     console.log(`${this.name} has cast ${this.favoriteSpell}!`)
   }
 }
 
 let playerChar = new Wizard(`Jimmidred`, 51, `Speak With Animals`)
-
 playerChar.castSpell()
 
 //////////////////////////// PROBLEM 14 ////////////////////////////
@@ -244,9 +243,27 @@ playerChar.castSpell()
     to be newPrice.
 */
 
-//Code Here
+class Phone {
+  constructor(brand, model, storage, color, price, sold) {
+    this.brand = brand;
+    this.model = model;
+    this.storage = storage;
+    this.color = color;
+    this.price = price;
+    this.sold = false;
+  }
 
+  sell() {
+    this.sold = true;
+    console.log(`${this.brand} ${this.model} has been sold.`)
+  }
+
+  changePrice(newPrice) {
+    this.price = newPrice
+  }
+}
   
+
 /*
     Next make three new phone instances using your class.
     Send in values of your choice. They should match these data types:
@@ -257,7 +274,10 @@ playerChar.castSpell()
     - price: number
 */
 
-//Code Here
+let myPhone = new Phone(`Samsung`, `Galaxy S10`, 128, `Silver`, 360)
+let wifePhone = new Phone(`Samsung`, `Galaxy S9`, 128, `Black`, 300)
+let somePhone = new Phone(`Apple`, `iPhone`, 64, `Gray`, 1100)
+
 
 /* 
   Call the changePrice function on one of your phones, 
@@ -266,7 +286,8 @@ playerChar.castSpell()
   Then console.log that object to see the price change
 */ 
 
-//Code Here 
+somePhone.changePrice(800)
+console.log(somePhone) 
 
 
 /*
@@ -275,7 +296,8 @@ playerChar.castSpell()
   Print the value of that phone's sell property to make sure it's been changed to true
 */
 
-//Code Here 
+myPhone.sell()
+console.log(myPhone.sold)
 
 
 //////////////////////////// PROBLEM 15 ////////////////////////////
