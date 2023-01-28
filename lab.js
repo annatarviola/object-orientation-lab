@@ -175,8 +175,7 @@ user.email = `bryan.smith@devmounta.in`
   Using the user object above, delete the users age off of the object.
 */
 
-//Code Here
-
+delete user.age
 
 //////////////////////////// PROBLEM 12 ////////////////////////////
 /*
@@ -185,8 +184,17 @@ user.email = `bryan.smith@devmounta.in`
   Print the name of your cat instance using dot notation.
 */
 
-//Code here
+class Cat {
+  constructor(name, age, color) {
+    this.name = name;
+    this.age = age;
+    this.color = color;
+  }
+}
 
+let Bella = new Cat(`Bella`, 14, `gray tabby`)
+
+console.log(Bella.name)
 
 
 //////////////////////////// PROBLEM 13 ////////////////////////////
@@ -197,7 +205,21 @@ user.email = `bryan.smith@devmounta.in`
   Call the castSpell function on the instance of your wizard.
 */
 
-//Code here
+class Wizard {
+  constructor(name, age, favoriteSpell) {
+    this.name = name;
+    this.age = age;
+    this.favoriteSpell = favoriteSpell;
+  }
+  
+  castSpell() {
+    console.log(`${this.name} has cast ${this.favoriteSpell}!`)
+  }
+}
+
+let playerChar = new Wizard(`Jimmidred`, 51, `Speak With Animals`)
+
+playerChar.castSpell()
 
 //////////////////////////// PROBLEM 14 ////////////////////////////
 /*
